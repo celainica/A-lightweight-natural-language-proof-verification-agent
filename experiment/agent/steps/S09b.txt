@@ -1,0 +1,51 @@
+Step ID: S09b
+
+Why this is one minimal logical deduction unit:
+This unit isolates the routine finite-index refinement that makes the subgroup orientation-preserving on both X and S.
+
+Original step:
+By passing to a further finite-index subgroup if necessary, we may assume Gamma_0 acts preserving the chosen orientations of both X and S.
+
+Target assertion a_i:
+After finite-index refinement, Gamma_0 acts preserving the chosen orientations of X and S.
+
+Original route:
+Intersect Gamma_0 with the kernels of the two orientation characters.
+
+Explanation:
+Once a finite-index subgroup Gamma_0 is available, the orientation signs on X and S define two homomorphisms to {+1,-1}. Intersecting their kernels yields the desired refinement.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+After finite-index refinement, Gamma_0 acts orientation-preservingly on X and S.
+
+Local Context `Gamma_i`:
+- gamma_1: Gamma_0 is a finite-index subgroup of Gamma.
+- gamma_2: X and S are orientable manifolds.
+
+Global Knowledge `Sigma_i`:
+- No nontrivial external statement is used in this unit.
+
+Sigma Support:
+- None.
+
+Background Theory `T_i`:
+- t_1: The sign of the action on an orientation line defines a homomorphism to {+1,-1}.
+- t_2: The intersection of finitely many finite-index subgroups is finite-index.
+
+Deduction:
+Apply t_1 to the actions on X and S to get two homomorphisms from Gamma_0 to {+1,-1}. Intersect their kernels. By t_2 the intersection still has finite index, and every element of it preserves the chosen orientations of both manifolds.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

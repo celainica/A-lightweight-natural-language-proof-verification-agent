@@ -1,0 +1,55 @@
+Step ID: S02b
+
+Why this is one minimal logical deduction unit:
+This unit keeps only the routine consequence of the duality formula and the Q-acyclicity hypothesis.
+
+Original step:
+Because X is Q-acyclic by hypothesis, its rational homology is concentrated entirely in degree zero, with H_0(X;Q)\cong Q. Consequently, the compactly supported rational cohomology of X is finite-dimensional and concentrated exclusively in the top degree n:
+
+H_c^k(X;Q)\cong
+{ Q if k=n,
+  0 if k!=n. }
+
+Target assertion a_i:
+H_c^k(X;Q)\cong Q for k=n and H_c^k(X;Q)=0 for k!=n.
+
+Original route:
+Substitute the Q-acyclic homology groups into the duality formula.
+
+Explanation:
+The hypothesis says X is Q-acyclic, so its only nonzero rational homology group is H_0(X;Q)\cong Q. Once the duality formula from S02 is available, the compactly supported cohomology groups are read off by substitution.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+H_c^k(X;Q)\cong Q for k=n and H_c^k(X;Q)=0 for k!=n.
+
+Local Context `Gamma_i`:
+- gamma_1: For every k, H_c^k(X;Q) \cong H_{n-k}(X;Q).
+- gamma_2: X is Q-acyclic, so H_i(X;Q)=0 for i>0.
+- gamma_3: X is connected, so H_0(X;Q)\cong Q.
+
+Global Knowledge `Sigma_i`:
+- No nontrivial external statement is used in this unit.
+
+Sigma Support:
+- None.
+
+Background Theory `T_i`:
+- t_1: Substitution into an isomorphism preserves the identified vector-space dimensions.
+
+Deduction:
+By gamma_2 and gamma_3, the only nonzero rational homology group of X is H_0(X;Q)\cong Q. Using gamma_1, H_c^k(X;Q) can therefore be nonzero only when n-k=0, namely k=n, and in that case H_c^n(X;Q)\cong Q.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

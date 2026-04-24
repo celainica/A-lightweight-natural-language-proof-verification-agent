@@ -1,0 +1,61 @@
+Step ID: S13b
+
+Why this is one minimal logical deduction unit:
+This unit isolates the assertion that the proper lift f has the same degree D as f_0.
+
+Original step:
+Consequently, its proper lift f:X->S similarly carries this non-zero degree.
+
+Target assertion a_i:
+The proper lift f:X->S has the same nonzero degree D.
+
+Original route:
+Transfer the degree from the quotient map to its proper lift.
+
+Explanation:
+The source text treats equality of the downstairs and upstairs degrees as a separate standard fact.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+The proper lift f:X->S has the same nonzero degree D as f_0.
+
+Local Context `Gamma_i`:
+- gamma_1: f_0 has nonzero degree D.
+- gamma_2: f:X->S is a proper lift of f_0, so there are covering projections q_M:X->M_0 and q_S:S->S_0 with q_S o f = f_0 o q_M.
+- gamma_3: X and S are oriented non-compact d-manifolds, while M_0 and S_0 are compact orientable d-manifolds.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: If f:X->S is a proper lift of f_0:M_0->S_0 between oriented d-manifolds as in gamma_2 and gamma_3, then the proper degree of f equals the ordinary degree of f_0.
+  proof or precise source: Proof below.
+  why it applies here: gamma_1, gamma_2, and gamma_3 are exactly the hypotheses of this lift-of-degree statement.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: Choose finite singular d-cycles c_M and c_S on the compact manifolds M_0 and S_0 representing their fundamental classes [M_0] and [S_0]. Since deg(f_0)=D, we may choose a finite singular (d+1)-chain b on S_0 such that
+  f_{0*}(c_M)-D c_S = partial b.
+  For each simplex appearing in c_M, c_S, and b, choose one lift to X or S and then sum all Gamma_0-translates of those chosen lifts. Because the original chains are finite and the Gamma_0-actions on X and S are properly discontinuous, these sums are locally finite chains; denote them by c_X, c_{S,lf}, and b_lf. The chains c_X and c_{S,lf} represent the locally finite fundamental classes [X]_{lf} and [S]_{lf}.
+  Since q_S o f = f_0 o q_M and f is Gamma_0-equivariant, applying f to each lifted simplex of c_M gives the corresponding lifted simplex of f_{0*}(c_M). Therefore f_*(c_X) is exactly the locally finite lift of the finite chain f_{0*}(c_M). Lifting the identity f_{0*}(c_M)-D c_S = partial b term-by-term gives
+  f_*(c_X)-D c_{S,lf} = partial b_lf.
+  Hence f_*[X]_{lf}=D[S]_{lf} in locally finite homology. This is precisely the defining degree relation for a proper map between oriented non-compact d-manifolds, so the proper degree of f is D.
+
+Background Theory `T_i`:
+- None beyond routine substitution of the value D.
+
+Deduction:
+By sigma_1, applied to gamma_1, gamma_2, and gamma_3, the proper degree of f equals the degree D of f_0. In particular, f has nonzero degree D.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

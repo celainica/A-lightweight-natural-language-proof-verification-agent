@@ -1,0 +1,55 @@
+Step ID: S16
+
+Why this is one minimal logical deduction unit:
+This unit isolates only the fixed-point claim for the involution gamma_S.
+
+Original step:
+By Cartan's fixed-point theorem for complete simply connected manifolds of non-positive curvature, the fixed-point set S^{gamma_S} is non-empty. Selecting a fixed point p in S^{gamma_S}...
+
+Target assertion a_i:
+gamma_S has a fixed point p in S.
+
+Original route:
+Show that the isometric involution gamma_S has a fixed point.
+
+Explanation:
+For an involution, the fixed-point existence can be proved directly from uniqueness of geodesics in a Hadamard manifold: the midpoint of a geodesic from x to gamma_S x is fixed.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+There exists p in S with gamma_S(p)=p.
+
+Local Context `Gamma_i`:
+- gamma_1: S is a Hadamard manifold.
+- gamma_2: gamma_S:S->S is an isometric involution.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: An isometric involution of a Hadamard manifold has a fixed point.
+  proof or precise source: Proof below.
+  why it applies here: gamma_1 and gamma_2 place gamma_S exactly in this situation.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: Choose any x in S. Let c:[0,1]->S be the unique geodesic from x to gamma_S(x), which exists and is unique because S is Hadamard. Since gamma_S is an involutive isometry, gamma_S∘c is a geodesic from gamma_S(x) back to x. By uniqueness of geodesics with the same endpoints, gamma_S(c(t))=c(1-t) for all t. Therefore the midpoint p=c(1/2) satisfies gamma_S(p)=p.
+
+Background Theory `T_i`:
+- None beyond standard geodesic uniqueness in a Hadamard manifold.
+
+Deduction:
+Applying sigma_1 to gamma_1 and gamma_2 yields a fixed point p of gamma_S.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

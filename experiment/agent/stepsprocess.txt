@@ -1,0 +1,305 @@
+Step: S01
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S01b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S02
+- status: VERIFIED
+- minimal unit: yes
+- criticality: highest
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S02b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S03
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S04
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S04b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S05
+- status: FLAWED
+- minimal unit: yes
+- criticality: highest
+- main blocker: the asserted multiplicativity formula contradicts verified local Euler-characteristic data
+- all used sigma closed: no
+- flaw witness: S02b gives chi_c(X)=(-1)^n=+/-1, while S04 and S04b give chi_c(Y) in Z, so chi_c(X)=2 chi_c(Y) would force an odd integer to be even
+- next action: none
+
+Step: S05b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S06
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S07
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S07b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S08
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S09
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S09b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: low
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S10
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S10b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S10c
+- status: VERIFIED
+- minimal unit: yes
+- criticality: low
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S11
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S11b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S11c
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S12
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S12b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: low
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S12c
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S13
+- status: VERIFIED
+- minimal unit: yes
+- criticality: highest
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S13b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S13c
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S13d
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S14
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S15
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S16
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S16b
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S16c
+- status: VERIFIED
+- minimal unit: yes
+- criticality: high
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none
+
+Step: S17
+- status: VERIFIED
+- minimal unit: yes
+- criticality: medium
+- main blocker: none
+- all used sigma closed: yes
+- flaw witness:
+- next action: none

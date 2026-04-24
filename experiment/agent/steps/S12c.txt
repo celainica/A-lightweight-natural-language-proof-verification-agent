@@ -1,0 +1,54 @@
+Step ID: S12c
+
+Why this is one minimal logical deduction unit:
+This unit isolates the final inference from the cohomology pattern of M_0 to the equality dim M_0=d.
+
+Original step:
+This perfectly aligns, strictly forcing the global dimension of M_0 to be exactly d.
+
+Target assertion a_i:
+dim M_0=d.
+
+Original route:
+Use the standard top-degree cohomology theorem for M_0 itself.
+
+Explanation:
+The proof needs the converse use of the manifold-top-cohomology theorem: for a compact orientable manifold, the unique highest nonzero cohomology degree is the manifold dimension.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+dim M_0=d.
+
+Local Context `Gamma_i`:
+- gamma_1: M_0 is a compact orientable manifold.
+- gamma_2: H^d(M_0;Q)\cong Q and H^k(M_0;Q)=0 for k>d.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: If N is a compact orientable m-manifold, then H^m(N;Q)\cong Q and H^k(N;Q)=0 for k>m.
+  proof or precise source: Precise source: Allen Hatcher, Algebraic Topology, Chapter 3, Theorem 3.30 (Poincare Duality), in the Poincare Duality section of the author's Chapter 3 PDF.
+  why it applies here: Applied to N=M_0, this theorem identifies the top nonzero cohomology degree with dim M_0.
+  status: confirmed
+
+Sigma Support:
+- sigma_1: Hatcher's Theorem 3.30 gives H^k(M_0;Q)\cong H_{m-k}(M_0;Q) when m=dim M_0. Hence H^m(M_0;Q)\cong H_0(M_0;Q)\cong Q and H^k(M_0;Q)=0 for k>m. Because gamma_2 says H^d(M_0;Q)\cong Q and H^k(M_0;Q)=0 for k>d, the largest degree with nonzero cohomology is d, so m=d.
+
+Background Theory `T_i`:
+- t_1: If H^d(N;Q)\cong Q and H^k(N;Q)=0 for k>d, then d is the highest nonzero cohomology degree.
+
+Deduction:
+Applying sigma_1 to gamma_1 shows that the highest nonzero cohomology degree of M_0 equals dim M_0. By gamma_2 and t_1, that highest nonzero degree is d. Hence dim M_0=d.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: sigma_1
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

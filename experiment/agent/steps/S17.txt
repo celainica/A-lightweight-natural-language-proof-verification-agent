@@ -1,0 +1,52 @@
+Step ID: S17
+
+Why this is one minimal logical deduction unit:
+This passage has one nontrivial output: the second proof claims a contradiction from L_c(gamma_X,X)=0 and L_c(gamma_S,S)=(-1)^k.
+
+Original step:
+Equating (8) and (9) by way of (7) yields 0=(-1)^k, an inescapable contradiction structurally confirming that Gamma cannot be the fundamental group of M.
+
+Target assertion a_i:
+The contradiction hypothesis is impossible, so Gamma cannot be the fundamental group of such an M.
+
+Original route:
+Combine the equality from S14 with the values obtained in S15 and S16.
+
+Explanation:
+The source identifies the two Lefschetz numbers in S14, then inserts the zero value for the action on X and the nonzero value for the action on S. Since 0 cannot equal (-1)^k, the contradiction hypothesis fails.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+Gamma cannot be the fundamental group of such a compact manifold M.
+
+Local Context `Gamma_i`:
+- gamma_1: L_c(gamma_X,X)=L_c(gamma_S,S).
+- gamma_2: L_c(gamma_X,X)=0.
+- gamma_3: L_c(gamma_S,S)=(-1)^k != 0.
+
+Global Knowledge `Sigma_i`:
+- No nontrivial external statement is newly used in this unit.
+
+Sigma Support:
+- None.
+
+Background Theory `T_i`:
+- t_1: A scalar cannot be equal to 0 and to a nonzero number simultaneously.
+- t_2: Contradiction discharges the temporary assumption.
+
+Deduction:
+From gamma_1 and gamma_2, L_c(gamma_S,S)=0. From gamma_3, the same scalar is nonzero. By t_1 this is impossible, so by t_2 the contradiction hypothesis is false.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

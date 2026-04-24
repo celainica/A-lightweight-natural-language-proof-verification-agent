@@ -1,0 +1,54 @@
+Step ID: S10
+
+Why this is one minimal logical deduction unit:
+This unit isolates the freeness of the Gamma_0-action on S. The quotient-manifold and descent consequences are separated into later units.
+
+Original step:
+Because S is a Hadamard manifold and Gamma_0 is torsion-free, Gamma_0 acts strictly freely on S.
+
+Target assertion a_i:
+Gamma_0 acts freely on S.
+
+Original route:
+Use proper discontinuity of the isometric action together with torsion-freeness.
+
+Explanation:
+The key point is that point stabilizers in a proper discrete isometric action are compact and discrete, hence finite. Torsion-freeness then forces them to be trivial.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+Gamma_0 acts freely on S.
+
+Local Context `Gamma_i`:
+- gamma_1: Gamma_0 is a discrete torsion-free group acting properly discontinuously by isometries on the Hadamard manifold S.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: A discrete torsion-free group acting properly discontinuously by isometries on a Hadamard manifold acts freely.
+  proof or precise source: Proof below.
+  why it applies here: gamma_1 places Gamma_0 exactly in this situation.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: Let x in S and suppose g in Gamma_0 fixes x. Proper discontinuity implies the stabilizer (Gamma_0)_x is discrete, because for the compact set {x} only finitely many group elements can send it to intersect itself. Since the action is isometric, (Gamma_0)_x is a subgroup of the compact isotropy group Isom(S)_x, so (Gamma_0)_x is compact. A compact discrete group is finite. Therefore any point stabilizer in Gamma_0 is finite. As Gamma_0 is torsion-free, every finite subgroup is trivial. Hence g=1, and the action is free.
+
+Background Theory `T_i`:
+- None beyond routine subgroup facts.
+
+Deduction:
+Applying sigma_1 to gamma_1 gives that Gamma_0 acts freely on S.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

@@ -1,0 +1,58 @@
+Step ID: S11b
+
+Why this is one minimal logical deduction unit:
+This unit isolates the identification of H^*(M_0;Q) with group cohomology.
+
+Original step:
+Furthermore, because X is acyclic over Q, the Cartan-Leray spectral sequence for the regular covering X->M_0 collapses at the E_2 page, yielding H^*(M_0;Q)\cong H^*(Gamma_0;Q).
+
+Target assertion a_i:
+H^*(M_0;Q)\cong H^*(Gamma_0;Q).
+
+Original route:
+Use the Q-acyclic universal cover to compute group cohomology of Gamma_0 from the quotient M_0.
+
+Explanation:
+The source states this through the Cartan-Leray spectral sequence. The same exact as-used statement can be proved directly from the Gamma_0-cellular chain complex of X.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+H^*(M_0;Q)\cong H^*(Gamma_0;Q).
+
+Local Context `Gamma_i`:
+- gamma_1: X is a free proper cocompact Gamma_0-CW complex.
+- gamma_2: X is Q-acyclic.
+- gamma_3: M_0=X/Gamma_0.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: For the regular covering X->M_0 with X Q-acyclic, H^*(M_0;Q)\cong H^*(Gamma_0;Q).
+  proof or precise source: Proof below.
+  why it applies here: gamma_1-gamma_3 place X->M_0 exactly in this situation.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: Let C_*(X;Q) be the cellular chain complex of the free Gamma_0-CW complex X. Because gamma_2 says X is Q-acyclic, the augmented complex C_*(X;Q)->Q is exact. Each C_n(X;Q) is a free Q[Gamma_0]-module, so this augmented complex is a free resolution of the trivial Q[Gamma_0]-module Q. Therefore
+  H^*(Gamma_0;Q)=H^*(Hom_{Q[Gamma_0]}(C_*(X;Q),Q)).
+  Because the Gamma_0-action on X is free and gamma_3 identifies the quotient with M_0, choosing one lift of each cell of M_0 identifies Hom_{Q[Gamma_0]}(C_n(X;Q),Q) with the cellular cochains C^n(M_0;Q). Thus the cohomology of the displayed Hom complex is H^*(M_0;Q). Hence H^*(M_0;Q)\cong H^*(Gamma_0;Q).
+
+Background Theory `T_i`:
+- t_1: Group cohomology over Q can be computed from any free Q[Gamma_0]-resolution of the trivial module Q.
+
+Deduction:
+Applying sigma_1 to gamma_1-gamma_3 yields H^*(M_0;Q)\cong H^*(Gamma_0;Q).
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

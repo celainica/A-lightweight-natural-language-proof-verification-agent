@@ -1,0 +1,57 @@
+Step ID: S02
+
+Why this is one minimal logical deduction unit:
+This unit isolates the non-compact Poincare duality input itself. The later substitution of the Q-acyclic homology groups is separated into S02b.
+
+Original step:
+By Poincare duality for non-compact orientable manifolds, the compactly supported rational cohomology of X is isomorphic to its ordinary rational homology:
+
+H_c^k(X;Q) \cong H_{n-k}(X;Q)
+
+for all integers k.
+
+Target assertion a_i:
+For every k, H_c^k(X;Q) \cong H_{n-k}(X;Q).
+
+Original route:
+Invoke non-compact Poincare duality for X.
+
+Explanation:
+The source text uses X as an orientable n-manifold and imports the non-compact Poincare duality isomorphism relating compactly supported cohomology to ordinary homology.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+For every k, H_c^k(X;Q) \cong H_{n-k}(X;Q).
+
+Local Context `Gamma_i`:
+- gamma_1: X is a connected orientable n-dimensional topological manifold.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: For every connected orientable non-compact n-manifold X and every k, H_c^k(X;Q) \cong H_{n-k}(X;Q).
+  proof or precise source: Precise source: Allen Hatcher, Algebraic Topology, Chapter 3, Theorem 3.35, author PDF on the Cornell page "Algebraic Topology Chapters," Chapter 3 "Cohomology," book p. 245 and following pages in the Poincare Duality section. Hatcher states the duality map D_M:H_c^k(M;R)->H_{n-k}(M;R) is an isomorphism for every R-oriented n-manifold.
+  why it applies here: The proof applies this duality to X in order to convert ordinary homology information into compactly supported cohomology information.
+  status: confirmed
+
+Sigma Support:
+- sigma_1: Hatcher's Theorem 3.35 is exactly the non-compact Poincare duality statement used here. Since S01 and S01b show that X is a connected orientable n-manifold, the theorem applies directly with R = Q.
+
+Background Theory `T_i`:
+- None beyond routine instantiation.
+
+Deduction:
+Applying sigma_1 to gamma_1 yields the displayed isomorphism for all k.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: sigma_1
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

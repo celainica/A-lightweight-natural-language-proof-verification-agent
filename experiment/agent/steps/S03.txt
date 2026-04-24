@@ -1,0 +1,59 @@
+Step ID: S03
+
+Why this is one minimal logical deduction unit:
+This passage has one nontrivial output: the compactly supported Lefschetz number of the order-2 deck transformation is nonzero.
+
+Original step:
+The fundamental group Gamma acts on X by deck transformations. Because M is a manifold, this properly discontinuous action is strictly free. Therefore, the torsion element gamma acts on X as a free, finite-order homeomorphism. As a homeomorphism of X, gamma induces a linear pullback automorphism gamma^* on the compactly supported cohomology H_c^*(X;Q). Because H_c^n(X;Q) is a 1-dimensional Q-vector space and gamma^2=id, the induced map gamma^* must act as multiplication by +/-1. We evaluate the compactly supported Lefschetz number of gamma, defined algebraically as the alternating sum of the traces of the induced maps on cohomology. This collapses to a single non-vanishing term at k=n, yielding:
+
+L_c(gamma,X)=sum_{k=0}^n (-1)^k Tr(gamma^*|H_c^k(X;Q))=(-1)^n(+/-1)!=0.
+
+Target assertion a_i:
+L_c(gamma,X) = (-1)^n(+/-1) and in particular L_c(gamma,X) != 0.
+
+Original route:
+Use the top-degree compactly supported cohomology description from S02 and elementary linear algebra for an involution on a 1-dimensional vector space.
+
+Explanation:
+Deck transformations act freely on the universal cover, so the order-2 element gamma acts freely on X. The cohomology computation from S02 says that only H_c^n(X;Q) survives and that it is one-dimensional. Since gamma^2 = id on X, the induced operator on that one-dimensional vector space also squares to the identity, so its only possible eigenvalues are +1 and -1. The Lefschetz sum therefore has exactly one nonzero term, and that term is +/-1 times (-1)^n.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+L_c(gamma,X) = (-1)^n(+/-1) != 0.
+
+Local Context `Gamma_i`:
+- gamma_1: gamma in Gamma has order 2.
+- gamma_2: Gamma acts on X by free deck transformations.
+- gamma_3: H_c^n(X;Q) \cong Q and H_c^k(X;Q) = 0 for k != n.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: The compactly supported Lefschetz number of a self-map is the alternating sum of the traces on H_c^k.
+  proof or precise source: Used here as the definition adopted by the source text.
+  why it applies here: The displayed computation is exactly an evaluation of that defining alternating sum.
+  status: confirmed
+
+Sigma Support:
+- sigma_1: In this step the source text itself defines L_c(gamma,X) algebraically as the alternating sum of traces, so no further external input is required for that definition.
+
+Background Theory `T_i`:
+- t_1: A deck transformation of the universal cover acts freely.
+- t_2: If T is a linear operator on a 1-dimensional Q-vector space and T^2 = id, then T = +id or T = -id.
+- t_3: If all cohomology groups except H_c^n vanish, then the alternating trace sum reduces to the degree-n term.
+
+Deduction:
+From gamma_1 and gamma_2, the map gamma:X->X is a free involutive homeomorphism. From gamma_3, H_c^n(X;Q) is one-dimensional and all other H_c^k vanish. By t_2, gamma^* on H_c^n(X;Q) is multiplication by +1 or -1. By sigma_1 and t_3, the Lefschetz number is therefore L_c(gamma,X) = (-1)^n Tr(gamma^*|H_c^n(X;Q)) = (-1)^n(+/-1), which is nonzero.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

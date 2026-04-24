@@ -1,0 +1,54 @@
+Step ID: S01b
+
+Why this is one minimal logical deduction unit:
+This unit isolates the orientability conclusion, which is the only nontrivial external burden left in the opening setup.
+
+Original step:
+Because M is a topological manifold, its universal cover X is inherently a simply connected, and hence orientable, n-dimensional topological manifold.
+
+Target assertion a_i:
+X is orientable.
+
+Original route:
+Use simple connectivity of X to deduce orientability.
+
+Explanation:
+Once X is known to be a simply connected n-manifold, the source text appeals to the standard orientability fact for simply connected manifolds. That is the only external ingredient in this sentence.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+X is orientable.
+
+Local Context `Gamma_i`:
+- gamma_1: X is a connected simply connected n-dimensional topological manifold.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: Every connected simply connected topological n-manifold is orientable.
+  proof or precise source: Proof below.
+  why it applies here: gamma_1 identifies X exactly as a connected simply connected manifold, so this theorem yields orientability of X.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: For a topological manifold X, the local orientation groups H_n(X,X-{x};Z) form a locally constant Z-bundle over X. Fix x_0 in X and choose one of the two generators of H_n(X,X-{x_0};Z). Transport that choice along a path from x_0 to any x; local constancy gives a generator in H_n(X,X-{x};Z). If two paths from x_0 to x are given, simple connectivity makes them homotopic rel endpoints, so the transported generator is the same for both paths. Thus every point receives a path-independent local orientation, and these local orientations are compatible on overlaps. Therefore X is orientable.
+
+Background Theory `T_i`:
+- t_1: The universal cover of a connected manifold is connected.
+
+Deduction:
+From gamma_1 and sigma_1, X is orientable.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

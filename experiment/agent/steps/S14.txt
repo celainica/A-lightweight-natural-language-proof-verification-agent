@@ -1,0 +1,54 @@
+Step ID: S14
+
+Why this is one minimal logical deduction unit:
+This passage has one nontrivial output: the compactly supported Lefschetz numbers of gamma on X and on S agree.
+
+Original step:
+Let gamma in Gamma be the given element of order 2. Because f is strictly Gamma-equivariant, commutativity enforces gamma_X^* o f^* = f^* o gamma_S^*. Since f^* is an isomorphism, the traces of gamma^* on H_c^d(X;Q) and H_c^d(S;Q) identically match. Because all other compactly supported rational cohomology groups for both X and S identically vanish (by acyclicity and contractibility, respectively), their compactly supported Lefschetz numbers match precisely:
+
+L_c(gamma_X,X)=L_c(gamma_S,S).
+
+Target assertion a_i:
+L_c(gamma_X,X) = L_c(gamma_S,S).
+
+Original route:
+Use equivariance to conjugate the induced actions through the isomorphism f^*, then note that only the top compactly supported cohomology group survives on each side.
+
+Explanation:
+Equivariance of f gives a commutative square on top compactly supported cohomology. If f^* is an isomorphism, gamma_X^* and gamma_S^* have the same trace on that degree. The proof also uses that compactly supported cohomology of both spaces vanishes away from degree d, so the Lefschetz number on each space reduces to the same signed trace in top degree.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+L_c(gamma_X,X) = L_c(gamma_S,S).
+
+Local Context `Gamma_i`:
+- gamma_1: f is Gamma-equivariant.
+- gamma_2: f^*:H_c^d(S;Q)->H_c^d(X;Q) is an isomorphism.
+- gamma_3: H_c^k(X;Q)=0 for k!=d and H_c^k(S;Q)=0 for k!=d.
+
+Global Knowledge `Sigma_i`:
+- No nontrivial external statement is newly used in this unit.
+
+Sigma Support:
+- None.
+
+Background Theory `T_i`:
+- t_1: Conjugate linear operators have the same trace.
+- t_2: If only degree d contributes to compactly supported cohomology, then the Lefschetz number is the same signed top-degree trace.
+
+Deduction:
+From gamma_1 and gamma_2, the maps gamma_S^* and gamma_X^* on H_c^d are conjugate, so by t_1 they have the same trace. By gamma_3 and t_2, each compactly supported Lefschetz number equals the same signed trace in degree d. Therefore L_c(gamma_X,X)=L_c(gamma_S,S).
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

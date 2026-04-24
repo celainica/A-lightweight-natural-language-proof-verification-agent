@@ -1,0 +1,56 @@
+Step ID: S16b
+
+Why this is one minimal logical deduction unit:
+This unit isolates the linearization of gamma_S at a fixed point via the exponential map.
+
+Original step:
+Selecting a fixed point p in S^{gamma_S}, the exponential map at p provides a gamma_S-equivariant diffeomorphism from the tangent space T_p S congruent to R^d to S. Under this identification, gamma_S acts as a linear involution.
+
+Target assertion a_i:
+Under the exponential identification T_pS congruent to R^d -> S, the action of gamma_S becomes a linear involution.
+
+Original route:
+Use equivariance of the exponential map at a fixed point.
+
+Explanation:
+An isometry fixing p sends a geodesic with initial vector v to the geodesic with initial vector d(gamma_S)_p(v). This is exactly the equivariance needed.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+exp_p:T_pS->S is gamma_S-equivariant, so gamma_S is conjugate to the linear involution d(gamma_S)_p on T_pS.
+
+Local Context `Gamma_i`:
+- gamma_1: p is a fixed point of gamma_S.
+- gamma_2: S is a Hadamard manifold.
+- gamma_3: gamma_S is an isometry of S.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: If an isometry g of a Hadamard manifold fixes p, then g(exp_p(v))=exp_p(dg_p(v)) for all v in T_pS.
+  proof or precise source: Proof below.
+  why it applies here: Applying the statement with g=gamma_S yields the claimed equivariance and linearization.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: For v in T_pS, the curve t -> exp_p(tv) is the geodesic starting at p with initial velocity v. Because gamma_3 is an isometry and gamma_1 says gamma_S(p)=p, the curve t -> gamma_S(exp_p(tv)) is also a geodesic starting at p, now with initial velocity d(gamma_S)_p(v). By uniqueness of geodesics with prescribed initial data, gamma_S(exp_p(tv))=exp_p(t d(gamma_S)_p(v)) for all t. Setting t=1 gives the desired equivariance. Since gamma_2 says S is Hadamard, exp_p is a global diffeomorphism, so gamma_S is conjugate to the linear map d(gamma_S)_p.
+
+Background Theory `T_i`:
+- t_1: The derivative of an involution is an involution.
+
+Deduction:
+Applying sigma_1 to gamma_1-gamma_3 yields the gamma_S-equivariant diffeomorphism exp_p. By t_1, the conjugate linear map on T_pS is a linear involution.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

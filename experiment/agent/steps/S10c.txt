@@ -1,0 +1,50 @@
+Step ID: S10c
+
+Why this is one minimal logical deduction unit:
+This unit isolates the routine descent of the Gamma-equivariant proper map f to the quotient manifolds.
+
+Original step:
+Let d=dim S. The proper map f descends to a continuous map f_0:M_0->S_0.
+
+Target assertion a_i:
+The map f descends to a continuous map f_0:M_0->S_0.
+
+Original route:
+Use Gamma_0-equivariance of f.
+
+Explanation:
+Because f is Gamma-equivariant, it is in particular Gamma_0-equivariant. Therefore points in the same Gamma_0-orbit of X have images in the same Gamma_0-orbit of S, so f passes to the quotient.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+There is a continuous map f_0:M_0->S_0 induced by f.
+
+Local Context `Gamma_i`:
+- gamma_1: M_0=X/Gamma_0 and S_0=S/Gamma_0.
+- gamma_2: f:X->S is Gamma-equivariant.
+
+Global Knowledge `Sigma_i`:
+- No nontrivial external statement is used in this unit.
+
+Sigma Support:
+- None.
+
+Background Theory `T_i`:
+- t_1: A Gamma_0-equivariant continuous map descends uniquely to a continuous map on quotient spaces.
+
+Deduction:
+Since Gamma_0<=Gamma, gamma_2 implies f is Gamma_0-equivariant. By t_1 it descends uniquely to a continuous map f_0:M_0->S_0.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

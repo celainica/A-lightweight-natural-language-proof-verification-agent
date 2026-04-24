@@ -1,0 +1,59 @@
+Step ID: S09
+
+Why this is one minimal logical deduction unit:
+This unit isolates the virtual torsion-freeness claim itself. The later orientation-preserving finite-index refinement is separated into S09b.
+
+Original step:
+Since Gamma is a finitely generated lattice in a Lie group G with finitely many connected components, its image under the adjoint representation Ad:G->GL(g) is a finitely generated linear group. By Selberg's Lemma, Ad(Gamma) contains a torsion-free normal subgroup of finite index. Because the kernel of the adjoint representation is the finite center Z(G), pulling this subgroup back to Gamma and intersecting it with a subgroup avoiding the finite central torsion ensures Gamma itself is virtually torsion-free. Thus, Gamma contains a torsion-free normal subgroup Gamma_0 of finite index.
+
+Target assertion a_i:
+Gamma contains a torsion-free normal subgroup Gamma_0 of finite index.
+
+Original route:
+Use the standard linear-group/Selberg route to deduce virtual torsion-freeness.
+
+Explanation:
+With the standing convention for this verifier run, Gamma is already linear over a characteristic-0 field. That lets this step close by the same Selberg-lemma route without using the faulty intermediate sentence about ker(Ad). So the adjoint-representation detour is unnecessary here.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+Gamma contains a torsion-free normal finite-index subgroup Gamma_0.
+
+Local Context `Gamma_i`:
+- gamma_1: Gamma is finitely generated.
+- gamma_2: By the standing convention in this verifier context, Gamma admits a faithful representation rho:Gamma->GL_m(F) over a field F of characteristic 0.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: If A is a finitely generated integral domain of characteristic 0, then GL_n(A) contains a normal torsion-free subgroup of finite index.
+  proof or precise source: Precise source: Roger C. Alperin, "An elementary account of Selberg's lemma," Enseign. Math. (2) 33 (1987), 269-273. The theorem stated at the start of the proof section says: for a finitely generated integral domain A, GL_n(A) is residually finite, and if A has characteristic 0 then GL_n(A) contains a normal subgroup of finite index which is torsion free.
+  why it applies here: From a faithful characteristic-0 linear representation of the finitely generated group Gamma, the matrix entries of a finite generating set lie in a finitely generated integral domain A, so rho(Gamma) is contained in GL_m(A).
+  status: confirmed
+
+Sigma Support:
+- sigma_1: Let S be a finite generating set of Gamma from gamma_1. The finitely many matrix entries appearing in rho(S) generate a finitely generated subring A of F. Because A is a subring of the field F, it is an integral domain, and because F has characteristic 0, so does A. Every element of rho(Gamma) is a word in rho(S), hence has all matrix entries in A. Therefore rho(Gamma) is a subgroup of GL_m(A). Alperin's theorem now applies to GL_m(A) and gives a normal finite-index torsion-free subgroup N of GL_m(A).
+
+Background Theory `T_i`:
+- t_1: The intersection of a subgroup with a normal finite-index subgroup is normal and finite-index in that subgroup.
+- t_2: The inverse image of a torsion-free subgroup under an injective homomorphism is torsion-free.
+
+Deduction:
+Choose a finite generating set S of Gamma as in gamma_1. By the Sigma Support paragraph, rho(Gamma) is a subgroup of GL_m(A) for some finitely generated integral domain A of characteristic 0. Apply sigma_1 to get a normal finite-index torsion-free subgroup N triangleleft GL_m(A). Set
+H = rho(Gamma) intersect N.
+By t_1, H is normal and finite-index in rho(Gamma), and because H is contained in the torsion-free group N, H is torsion-free. Now define
+Gamma_0 = rho^{-1}(H).
+Since rho is injective by gamma_2, t_2 shows that Gamma_0 is torsion-free. It is normal in Gamma because H is normal in rho(Gamma), and it has finite index because H has finite index in rho(Gamma). Therefore Gamma contains a torsion-free normal subgroup Gamma_0 of finite index.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes; this is the same Selberg-lemma linear-group route, using the standing linearity convention instead of the invalid ker(Ad) detour.
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

@@ -1,0 +1,6 @@
+D4
+- step(s): S05
+- exact as-used statement: For a finite k-sheeted unbranched covering p:X->Y of locally compact ENRs with finite Betti numbers, chi_c(X)=k chi_c(Y).
+- status: FALSE
+- why: Applied with k=2 to the verified cover p:X->Y, it gives chi_c(X)=2 chi_c(Y), but S02b gives chi_c(X)=(-1)^n=+/-1 while S04 and S04b give chi_c(Y) in Z.
+- offending point if false: In the current local context, the theorem would force an even integer to equal +1 or -1.

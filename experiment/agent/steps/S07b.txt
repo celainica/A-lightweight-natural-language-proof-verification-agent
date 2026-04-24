@@ -1,0 +1,49 @@
+Step ID: S07b
+
+Why this is one minimal logical deduction unit:
+This unit keeps only the passage from a section of the associated bundle to a Gamma-equivariant map upstairs.
+
+Original step:
+Lifting this section to the universal covers yields a continuous Gamma-equivariant map f:X->S.
+
+Target assertion a_i:
+There exists a continuous Gamma-equivariant map f:X->S.
+
+Original route:
+Lift the previously obtained section to the universal covers.
+
+Explanation:
+Once a section of the associated bundle is given, the usual lifting correspondence for associated bundles and universal covers produces a Gamma-equivariant map upstairs.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+There exists a continuous Gamma-equivariant map f:X->S.
+
+Local Context `Gamma_i`:
+- gamma_1: The bundle p:(X times S)/Gamma -> M admits a continuous global section.
+
+Global Knowledge `Sigma_i`:
+- No nontrivial external statement is used in this unit.
+
+Sigma Support:
+- None.
+
+Background Theory `T_i`:
+- t_1: A section of (X times S)/Gamma -> M is equivalent to a Gamma-equivariant map X->S after lifting to the universal covers.
+
+Deduction:
+From gamma_1 and t_1, lifting the section yields a continuous Gamma-equivariant map f:X->S.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: none
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24

@@ -1,0 +1,59 @@
+Step ID: S13c
+
+Why this is one minimal logical deduction unit:
+This unit isolates the action of a proper degree-D map on top compactly supported cohomology.
+
+Original step:
+For a proper map between non-compact oriented manifolds of the same dimension, the induced pullback on the top-degree compactly supported rational cohomology is equivalent to multiplication by its mapping degree D.
+
+Target assertion a_i:
+f^*:H_c^d(S;Q)->H_c^d(X;Q) is multiplication by D.
+
+Original route:
+Apply the standard degree formula for proper maps on top compactly supported cohomology.
+
+Explanation:
+The source text invokes the noncompact analogue of the degree formula for top-degree cohomology, using compact supports.
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+f^*:H_c^d(S;Q)->H_c^d(X;Q) is multiplication by D.
+
+Local Context `Gamma_i`:
+- gamma_1: f:X->S is a proper map between oriented non-compact d-manifolds.
+- gamma_2: f has degree D.
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement: If h:U->V is a proper map between oriented non-compact d-manifolds and h_*[U]_{lf}=D[V]_{lf} on locally finite fundamental classes, then h^*:H_c^d(V;Q)->H_c^d(U;Q) is multiplication by D.
+  proof or precise source: Proof below.
+  why it applies here: S13b supplies the degree relation f_*[X]_{lf}=D[S]_{lf}, and this statement converts that homological degree into the cohomological action used in the source text.
+  status: confirmed
+
+Sigma Support:
+- sigma_1:
+  proof: Let u_S in H_c^d(S;Q) and u_X in H_c^d(X;Q) be the orientation classes characterized by
+  <u_S,[S]_{lf}>=1 and <u_X,[X]_{lf}>=1.
+  For compactly supported cohomology and locally finite homology, Kronecker pairing is natural for proper maps, so
+  <h^*u_S,[U]_{lf}> = <u_S,h_*[U]_{lf}> = <u_S,D[V]_{lf}> = D.
+  Since H_c^d(U;Q) is 1-dimensional with orientation basis u_U, the equality above forces h^*u_S = D u_U. Therefore h^* on top compactly supported cohomology is multiplication by D.
+
+Background Theory `T_i`:
+- None beyond routine instantiation.
+
+Deduction:
+By sigma_1, the pullback f^* on H_c^d is multiplication by the proper degree. Since gamma_2 names that degree D, f^* is multiplication by D.
+
+Diagnosis:
+- conclusion preserved: yes
+- route preserved: yes
+- exact offending dependence, if any: sigma_1
+- flaw witness, if any: none
+
+Step Result:
+- status: VERIFIED
+- main blocker: none
+- flaw witness: none
+- dependencies: none
+- last update: 2026-04-24
