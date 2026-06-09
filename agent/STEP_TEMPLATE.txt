@@ -1,0 +1,52 @@
+Step ID:
+
+Why this is one minimal logical deduction unit:
+
+Original step:
+[paste the full original step string verbatim]
+
+Target assertion a_i:
+
+Original route:
+
+Explanation:
+[write a thick natural-language elaboration that preserves the same assertion and route]
+
+Statement Extraction `(Gamma_i, Sigma_i, T_i)`:
+
+Assertion:
+
+Local Context `Gamma_i`:
+- gamma_1:
+- gamma_2:
+
+Global Knowledge `Sigma_i`:
+- sigma_1:
+  exact as-used statement:
+  proof or precise source:
+  why it applies here:
+  status: confirmed / open / false
+- sigma_2:
+
+Sigma Support:
+[for each used sigma_j, include either a proof or a precise source]
+
+Background Theory `T_i`:
+- t_1:
+- t_2:
+
+Deduction:
+[derive the assertion from `Gamma_i`, confirmed `Sigma_i`, and `T_i`; if some used sigma_j is still open, state that the route is only conditionally closed]
+
+Diagnosis:
+- conclusion preserved:
+- route preserved:
+- exact offending dependence, if any:
+- flaw witness, if any:
+
+Step Result:
+- status: UNTOUCHED / OPEN / VERIFIED / FLAWED
+- main blocker:
+- flaw witness:
+- dependencies:
+- last update:

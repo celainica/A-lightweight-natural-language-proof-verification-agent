@@ -1,0 +1,52 @@
+`dependency.txt`
+
+List only external statements that are still `OPEN` or already `FALSE`.
+
+Format:
+
+D1
+- step(s):
+- exact as-used statement:
+- status: OPEN / FALSE
+- why:
+- offending point if false:
+
+`stepsprocess.txt`
+
+For each step:
+
+Step:
+- status: UNTOUCHED / OPEN / VERIFIED / FLAWED
+- minimal unit: yes / no
+- criticality:
+- main blocker:
+- all used sigma closed: yes / no
+- flaw witness:
+- next action:
+
+`answer.txt`
+
+Format:
+
+Overall verdict: RUNNING / VERIFIED / FLAWED
+
+Current key step:
+
+If FLAWED:
+- offending step:
+- exact false statement or invalid inference:
+- flaw witness:
+
+If still running:
+- remaining open steps:
+- active dependencies:
+
+Per-step summary:
+- step:
+  status:
+  one-line reason:
+
+Rule:
+
+Do not use `FLAWED` unless an explicit flaw witness has been written.
+Do not use `VERIFIED` unless all used external statements are marked `confirmed`.
