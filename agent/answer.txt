@@ -1,7 +1,0 @@
-Overall verdict: RUNNING
-
-Current key step:
-
-If still running:
-- remaining open steps:
-- active dependencies:
